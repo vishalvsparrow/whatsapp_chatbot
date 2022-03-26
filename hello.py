@@ -16,21 +16,21 @@ def hello():
 	return "Hello World!"
 
 
-def get_jargon():
+# def get_jargon():
 
-	url = 'https://corporatebs-generator.sameerkumar.website/'
-	resp = requests.get(url)
-	resp = resp.json()['phrase']
-	#print(resp)
-	return resp
+# 	url = 'https://corporatebs-generator.sameerkumar.website/'
+# 	resp = requests.get(url)
+# 	resp = resp.json()['phrase']
+# 	#print(resp)
+# 	return resp
 
-def post_image():
+# def post_image():
 
-	url = 'https://corporatebs-generator.sameerkumar.website/'
-	resp = requests.get(url)
-	resp = resp.json()['phrase']
-	#print(resp)
-	return resp
+# 	url = 'https://corporatebs-generator.sameerkumar.website/'
+# 	resp = requests.get(url)
+# 	resp = resp.json()['phrase']
+# 	#print(resp)
+# 	return resp
 
 def overlay(image):
 
@@ -58,7 +58,7 @@ def overlay(image):
 	pil_image.save('hello.png')
 	return None
 
-def update_user(sender_num='+16574457032'):
+def update_user(sender_num=None):
 
 	conn = db.create_connection("user.db")
 	
@@ -68,17 +68,16 @@ def update_user(sender_num='+16574457032'):
 		db.create_row(conn, sender_num, current_count)
 
 	db.insert_rows(conn, sender_num, current_count)
-	
+
+	conn.close()
+
 	return current_count
 
-
-
-
-@app.route("/sms", methods = ['POST', 'GET'])
-def sms_reply():
+@app.route("/sms", methods = ['POST', 'PUT'])
+def sms():
 
 	## get inbound message
-
+	print('-----------------> HELLO <---------------')
 	msg = request.form.get('Body')
 	print(msg)
 	## get sender's number
@@ -103,7 +102,9 @@ def sms_reply():
 
 	## create a reply
 
+	# get the response
 	resp = MessagingResponse()
+
 	try:
 		num_media = int(request.values.get("NumMedia"))
 	except Exception:
@@ -120,7 +121,7 @@ def sms_reply():
 
 
 	else:
-		filename = request.values['MessageSid']
+		filename = request.values['Messagesid']
 		print(filename)
 		print(request.values)
 		with open('{}'.format(filename), 'wb') as f:
