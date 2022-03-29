@@ -112,14 +112,32 @@ def chat():
 		resp.message(get_message_text(message_type_id, message_id))
 		return str(resp)	
 
-	# if the user gave a feedback
-	if check_help_response(response):
-		message_id = 0
-		message_type_id = 4
-		#db.insert_message(conn, message_id, message_type_id, whatsapp_number)
-		# send the message
-		resp.message(get_message_text(message_type_id, message_id))
-		return str(resp)
+	# if the last message was of Helper type and for HELP
+	if helper_message_dict:
+		
+		# if the user wanted to reset the conversation 
+		if helper_message_dict['message_id_helper'] == '0':
+			if any(map(response.lower().__contains__, ['reset', 'start over'])):
+				# reset user state
+				print('reset user state')
+				db.reset_user_state(conn, whatsapp_number)
+
+				# send the second intro message to the user
+				message_type_id=2 # Introduction type
+				message_id=1 # The first hello message to ask the name again
+				
+				# update the message sent to user
+				db.insert_message(conn, message_id, message_type_id, whatsapp_number)
+				# send the message to user
+				resp.message(get_message_text(message_type_id, message_id))
+				return str(resp)
+			elif check_feedback_response(response):
+				print('feedback')
+				message_id = last_message_dict['message_id']
+				message_type_id = last_message_dict['message_type_id']
+				resp.message('Feedback recorded. Thank you!')
+				resp.message(get_message_text(message_type_id, message_id))
+				return str(resp)
 
 	# if the user asked to repeat the last message
 	if check_repeat_response(response):
@@ -197,8 +215,8 @@ def chat():
 				return str(resp)
 
 			if str(response) == '2':
-				# send the coming soon message for quiz 
-				message_id = 1 # coming soon
+				# start the quiz
+				message_id = 1 # first question
 				message_type_id = 3 # quiz
 				db.insert_message(conn, message_id, message_type_id, whatsapp_number)
 				resp.message(get_message_text(message_type_id, message_id))
@@ -234,26 +252,23 @@ def chat():
 					resp.message(get_message_text(message_type_id, message_id))
 					return str(resp)
 
+	# if the last message was of quiz type
+	if last_message_dict['message_type_id'] == '3':
+		if response.lower().strip() == 'exit':
+			pass # let the message go to default state
 
-	# if the last message was of Helper type and for HELP
-	if helper_message_dict:
-		
-		# if the user wanted to reset the conversation 
-		if helper_message_dict['message_id_helper'] == '0':
-			if any(map(response.lower().__contains__, ['reset', 'start over'])):
-				# reset user state
-				print('reset user state')
-				db.reset_user_state(conn, whatsapp_number)
+		elif last_message_dict['message_id'] == '6':
+			pass # let the message go to default state
+			
+		else:
+			message_type_id = 3 # quiz
+			message_id = int(last_message_dict['message_id']) + 1
+			db.insert_message(conn, message_id, message_type_id, whatsapp_number)
+			resp.message(get_message_text(message_type_id, message_id))
+			return str(resp)
 
-				# send the second intro message to the user
-				message_type_id=2 # Introduction type
-				message_id=1 # The first hello message to ask the name again
-				
-				# update the message sent to user
-				db.insert_message(conn, message_id, message_type_id, whatsapp_number)
-				# send the message to user
-				resp.message(get_message_text(message_type_id, message_id))
-				return str(resp)
+
+
 
 
 	# default message: Introduction message
@@ -264,7 +279,7 @@ def chat():
 	message_type_id = 2
 	db.insert_message(conn, message_id, message_type_id, whatsapp_number)
 
-	print(db.get_user_name(conn, whatsapp_number), 'name???')
+	#print(db.get_user_name(conn, whatsapp_number), 'name???')
 	resp.message(get_message_text(message_type_id, message_id, user_name))
 	return str(resp)
 

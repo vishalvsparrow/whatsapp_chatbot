@@ -15,31 +15,31 @@
 	{
 	"message_id": "1",
 	"message_type": "2",
-	"text": "Hello 👋 This is Vishal's bot. I'm here to automate the process of getting to know each other at scale!🤖 \nLooking at Instagram profiles or adding on Snapchat just doesn't cut it, you know?\n\nSo, to start with, please tell me your name"
+	"text": "Hello 👋 This is Vishal's bot. I'm here to automate the process of getting to know each other at scale!🤖 \n\nLooking at Instagram profiles or adding on Snapchat just doesn't cut it, you know?\n\nSo, to start with, please tell me your name"
 	},		
 
 	{
 	"message_id": "2",
 	"message_type": "2",
-	"text": "\nHere are a few things that I can help you with: \n\nType 1 if you'd like a brief introduction on Vishal, his likes and dislikes, and all that 😃🥷\nType 2 to take a fun little quiz to see how your answers would compare against Vishal's 🤔\nType 3 to get his social media handles if you'd like to chat with him 💬\n\nIf you're stuck at any point, just type 'help'"
+	"text": "\nHere are a few things that I can help you with: \n\nType 1 if you'd like a brief introduction on Vishal, his likes and dislikes, and all that 😃🥷\n\nType 2 to take a fun little quiz to see how your answers would compare against Vishal's 🤔\n\nType 3 to get his social media handles if you'd like to chat with him 💬\n\nIf you're stuck at any point, just type 'help'"
 	},	
 
 	{
 	"message_id": "3",
 	"message_type": "2",
-	"text": "Vishal is a 27 year old guy living in Northern California. He works as a Data Analyst 🧑‍💻 for a tech startup and likes to write poetry and make music in his free time 👨‍🎨. Vishal's a vegetarian and a teetotaler since 2015. He's really into fitness 💪 and likes going on hikes every now and then 🏃. He's really into (board) game nights as well 🎮! Type 'next' for more"
+	"text": "Vishal is a 27 year old guy living in Northern California. He works as a Data Analyst 🧑‍💻 for a tech startup and likes to write poetry and make music in his free time 👨‍🎨. Vishal's a vegetarian and a teetotaler since 2015. He's really into fitness 💪 and likes going on hikes every now and then 🏃. He's really into (board) game nights as well 🎮! \n\nType 'next' for more"
 	},	
 
 	{
 	"message_id": "4",
 	"message_type": "2",
-	"text": "History\n Vishal was born in a small town 🛖 of Gujarat in India. He went to a convent school 🏫 until the 10th grade and then moved to the city of Ahmedabad for his 11th and 12th grade. Later, he got his Bachelors in Engineering from the city of Vasad, and a Masters from CSU Fullerton 🎓. Type 'next' for more"
+	"text": "History:\nVishal was born in a small town 🛖 of Gujarat in India. He went to a convent school 🏫 until the 10th grade and then moved to the city of Ahmedabad for his 11th and 12th grade. \n\nLater, he got his Bachelors in Engineering from the city of Vasad, and a Masters from CSU Fullerton 🎓. \n\nType 'next' for more"
 	},
 
 	{
 	"message_id": "5",
 	"message_type": "2",
-	"text": "History continued:\nVishal believes that everybody is a work-in-progress being but also thinks that people seldom change, unless they really try to. \n\nHe avoids sticking to a doctrine or a belief system, but likes to stay consistent about things he is sure of. \n\nHis political views are mostly moderate 📋🖋, although he supports Bernie Sanders/Andrew Yang on many issues such as Healthcare, Women's rights, and Universal Basic Income 🪙.\n\nHe's an INFP/INTP afterall 🥲\n\nHope this wasn't too bland of an introduction!"
+	"text": "History continued:\nVishal believes that everybody is a work-in-progress being but also thinks that people seldom change, unless they really try to. \n\nHe avoids sticking to a doctrine or a belief system, but likes to stay consistent about things he is sure of. \n\nHis political views are mostly moderate 📋🖋, although he supports Bernie Sanders/Andrew Yang on many issues such as Healthcare and Universal Basic Income 🪙.\n\nHe's an INFP/INTP afterall 🥲\n\nHope this wasn't too bland of an introduction!"
 	},
 
 	{
@@ -122,9 +122,45 @@
 	},
 
 	{
-	"message_id": "1",
+	"message_id": "-1",
 	"message_type": "3",
 	"text": "Quiz coming soon!"
+	},	
+
+	{
+	"message_id": "1",
+	"message_type": "3",
+	"text": "Let's play a quick 5-question game for you to decide if both of you will vibe well 🌻✨🌙! \n\nI will reveal Vishal's answers after reading your answers. \n\nTo stop at any point, reply 'exit'. To repeat the question, type 'repeat'. To get help, type 'help'. Ready? \n\n1. What's your favorite movie in the comedy genre?"
+	},
+
+	{
+	"message_id": "2",
+	"message_type": "3",
+	"text": "Nice! Vishal's favorite comedy movie is Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan. Lol.\n\n2. Do you have any pet peeves? 🐶"
+	},	
+
+	{
+	"message_id": "3",
+	"message_type": "3",
+	"text": "Uh oh, that sounds harsh. Vishal's top pet peeve is people driving recklessly. However, he has never instigated a road rage 😜\n\n3. Which fictional character do you relate to the most? 🦸"
+	},	
+
+	{
+	"message_id": "4",
+	"message_type": "3",
+	"text": "Interesting indeed. One character that Vishal has related with the most during as a teen is Dr. House from House M.D.\n\n4. Is there anything that you don't eat? 🍔"
+	},	
+
+	{
+	"message_id": "5",
+	"message_type": "3",
+	"text": "Hmm, interesting dietary choices. Vishal doesn't eat meat and loves bitter gourd. Strange.🥴\n\n5. Okay, last question! What's the best present you ever gave someone or received? 🎁"
+	},
+
+	{
+	"message_id": "6",
+	"message_type": "3",
+	"text": "Presents are wonderful. The best present Vishal ever gave was a taser gun and ever received was a custom-made notebook with a marvelous painting on the front 📚\n\nThat's all! Feel free to hit him up if you think you two will vibe well 📱 @vishalvatnani"
 	},
 
 	{
