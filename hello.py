@@ -7,6 +7,7 @@ from io import BytesIO
 import db
 import sqlite3
 import math
+import json
 
 
 app = Flask(__name__)
@@ -143,7 +144,19 @@ def callback():
 
 	return None
 
-#@app.route()
+@app.route("/chat", methods = ['POST', 'PUT'])
+def chat():
+	# get user's phone number
+	user = request.form.get('From').split(':')[1]	
+	# get the actual message
+	msg = request.form.get('Body')
+
+	resp = MessagingResponse()
+	resp.message('Hello there! Your number is %s' % user)
+	
+	print(resp)
+
+	return str(resp)
 
 if __name__ == "__main__":
 	app.run(debug=True)

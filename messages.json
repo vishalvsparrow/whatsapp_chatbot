@@ -1,10 +1,144 @@
 [
-
 {
-	"1": "Hello 👋 This is Vishal Vatnani. Actually, I'm his chatbot, but we go by the same name. \\n Sometimes you can't tell who's who, even in the real world 🤖 \\nThe point of this bot is to automate the process of getting to know each other so that small-talks can scale for Vishal. Weird, I know. But I'm glad you're here! \\n\\n Here are a few things that I can help you with: \\n 1. I can share a brief bio on Vishal, his background, what he's been upto, and where he is going (not literally)\\n 2. Take a fun little quiz to see how your answers would compare against Vishal's\\n 3. Share his social media handles in case you want to talk to the real thing\\n\\n Remember, your data will be safe and stored in a secure cloud database, and your messages will be used for analytics. Vishal will not try to contact your phone number unless you explicitly say so. \\nPlease type your selection. For example, type '1' for getting to know more about Vishal"
+	"meta": 
+		{
+			"message_types": {
+				"0": "Helper messages",
+				"1": "Say again messages",
+				"2": "Introduction messages",
+				"3": "Quiz messages",
+				"4": "Share identity messages"
+			}
+		}
+	,
+	"messages": [
+	{
+	"message_id": "1",
+	"message_type": "2",
+	"text": "Hello 👋 This is Vishal's bot. I'm here to automate the process of getting to know each other at scale!🤖 \nLooking at Instagram profiles or adding on Snapchat just doesn't cut it, you know?\n\nSo, to start with, please tell me your name"
+	},		
 
+	{
+	"message_id": "2",
+	"message_type": "2",
+	"text": "\nHere are a few things that I can help you with: \n\nType 1 if you'd like a brief introduction on Vishal, his likes and dislikes, and all that 😃🥷\nType 2 to take a fun little quiz to see how your answers would compare against Vishal's 🤔\nType 3 to get his social media handles if you'd like to chat with him 💬\n\nIf you're stuck at any point, just type 'help'"
+	},	
 
+	{
+	"message_id": "3",
+	"message_type": "2",
+	"text": "Vishal is a 27 year old guy living in Northern California. He works as a Data Analyst 🧑‍💻 for a tech startup and likes to write poetry and make music in his free time 👨‍🎨. Vishal's a vegetarian and a teetotaler since 2015. He's really into fitness 💪 and likes going on hikes every now and then 🏃. He's really into (board) game nights as well 🎮! Type 'next' for more"
+	},	
 
+	{
+	"message_id": "4",
+	"message_type": "2",
+	"text": "History\n Vishal was born in a small town 🛖 of Gujarat in India. He went to a convent school 🏫 until the 10th grade and then moved to the city of Ahmedabad for his 11th and 12th grade. Later, he got his Bachelors in Engineering from the city of Vasad, and a Masters from CSU Fullerton 🎓. Type 'next' for more"
+	},
+
+	{
+	"message_id": "5",
+	"message_type": "2",
+	"text": "History continued:\nVishal believes that everybody is a work-in-progress being but also thinks that people seldom change, unless they really try to. \n\nHe avoids sticking to a doctrine or a belief system, but likes to stay consistent about things he is sure of. \n\nHis political views are mostly moderate 📋🖋, although he supports Bernie Sanders/Andrew Yang on many issues such as Healthcare, Women's rights, and Universal Basic Income 🪙.\n\nHe's an INFP/INTP afterall 🥲\n\nHope this wasn't too bland of an introduction!"
+	},
+
+	{
+	"message_id": "0",
+	"message_type": "0",
+	"text": "HELP\nTo reset this chat and return to the introduction, type 'Reset' or 'Start over'\nTo repeat the last message/question, type 'Repeat' or 'huh?' or 'say that again'. To give feedback, type your message starting with the word 'feedback'"
+	},	
+
+	{
+	"message_id": "1",
+	"message_type": "0",
+	"text": "To read the next message, type 'next' or 'tell me more'"
+	},	
+
+	{
+	"message_id": "2",
+	"message_type": "0",
+	"text": "That's all I had to share!"
+	},	
+
+	{
+	"message_id": "3",
+	"message_type": "0",
+	"text": "Goodbye"
+	},	
+
+	{
+	"message_id": "4",
+	"message_type": "0",
+	"text": "Thanks, I've stored your feedback"
+	},	
+
+	{
+	"message_id": "5",
+	"message_type": "0",
+	"text": "Awesome, I'll call you "
+	},	
+
+	{
+	"message_id": "5",
+	"message_type": "0",
+	"text": "Okay, I have changed your name to "
+
+	},
+
+	{
+	"message_id": "1",
+	"message_type": "1",
+	"text": "I'm sorry, I don't recognize the input. Type \"help\" if you're stuck"
+	},	
+
+	{
+	"message_id": "2",
+	"message_type": "1",
+	"text": "I didn't understand that. Type \"help\" if you're stuck"
+	},	
+
+	{
+	"message_id": "3",
+	"message_type": "1",
+	"text": "I don't quite follow. Type \"help\" if you're stuck"
+	},
+
+	{
+	"message_id": "4",
+	"message_type": "1",
+	"text": "I'm not an AI bot, so I don't understand. Type \"help\" if you're stuck"
+	},
+
+	{
+	"message_id": "5",
+	"message_type": "1",
+	"text": "I don't know how to answer that. Type \"help\" if you're stuck"
+	},
+
+	{
+	"message_id": "6",
+	"message_type": "1",
+	"text": "Could you try saying something different? Type \"help\" if you're stuck"
+	},
+
+	{
+	"message_id": "1",
+	"message_type": "3",
+	"text": "Quiz coming soon!"
+	},
+
+	{
+	"message_id": "1",
+	"message_type": "4",
+	"text": "Here's Vishal's Instagram: @vishalvatnani.\n\nThanks for using the bot!"
+	},
+
+	{
+	"message_id": "2",
+	"message_type": "4",
+	"text": "What's your name?"
+	}
+
+	]
 }
-
 ]
